@@ -1,9 +1,9 @@
 // Worker - Processes score messages from Redis Stream
 import 'dotenv/config';
-import { scoreConsumer } from './layers/messaging';
-import { scoreService } from './layers/business';
+import { scoreConsumer } from '../layers/messaging';
+import { scoreService } from '../layers/business';
 
-export async function main() {
+export async function runWorker() {
   // Initialize consumer group
   await scoreConsumer.initialize();
   
