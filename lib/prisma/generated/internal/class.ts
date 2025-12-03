@@ -12,7 +12,7 @@
  */
 
 import * as runtime from "@prisma/client/runtime/client"
-import type * as Prisma from "./prismaNamespace"
+import type * as Prisma from "./prismaNamespace.js"
 
 
 const config: runtime.GetPrismaClientConfig = {
@@ -20,7 +20,7 @@ const config: runtime.GetPrismaClientConfig = {
   "clientVersion": "7.0.1",
   "engineVersion": "f09f2815f091dbba658cdcd2264306d88bb5bda6",
   "activeProvider": "postgresql",
-  "inlineSchema": "generator client {\n  provider = \"prisma-client\"\n  output   = \"./generated\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n}\n\nmodel UserScore {\n  id        Int      @id @default(autoincrement())\n  username  String   @unique\n  score     Int\n  updatedAt DateTime @updatedAt\n}\n",
+  "inlineSchema": "generator client {\n  provider   = \"prisma-client\"\n  output     = \"./generated\"\n  engineType = \"client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n}\n\nmodel UserScore {\n  id        Int      @id @default(autoincrement())\n  username  String   @unique\n  score     Int\n  updatedAt DateTime @updatedAt\n}\n",
   "runtimeDataModel": {
     "models": {},
     "enums": {},
