@@ -3,7 +3,7 @@ import 'dotenv/config';
 import { scoreConsumer } from './layers/messaging';
 import { scoreService } from './layers/business';
 
-async function main() {
+export async function main() {
   // Initialize consumer group
   await scoreConsumer.initialize();
   
