@@ -36,8 +36,3 @@ export async function main() {
     }
   }
 }
-
-main().catch((error) => {
-  console.error('Worker crashed:', error);
-  process.exit(1);
-});
